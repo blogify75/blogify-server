@@ -1,0 +1,12 @@
+mongoDb project name: blogify75
+password: MYmbyKxYpww5DlQ9
+
+1. npm init -y
+2. npm install typescript --save-dev
+3. npm install -g typescript
+4. npx tsc --init
+5. go to tsConfig.json and uncomment rootDir and outDir
+6. npm i express dotenv cors http-status mongoose
+7. install ts-node-dev
+8. go to package.json and put this in script:
+    "dev": "ts-node-dev --respawn --transpile-only server.ts"
