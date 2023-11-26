@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "blogify-server",
+    "builds": [
+       { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/server.ts" }
+    ]
+ }
