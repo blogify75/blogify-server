@@ -8,6 +8,11 @@ const blogSchema = new Schema<IBlog, BlogModel>(
       required: true,
       maxlength: 80,
     },
+    sub_title: {
+      type: String,
+      required: true,
+      maxlength: 80,
+    },
     name: {
       type: String,
       required: true,
