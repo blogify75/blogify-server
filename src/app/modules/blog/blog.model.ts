@@ -29,6 +29,10 @@ const blogSchema = new Schema<IBlog, BlogModel>(
       default: false,
       required: true,
     },
+    date: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

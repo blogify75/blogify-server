@@ -7,6 +7,7 @@ export type IBlog = {
   img: string;
   description: string;
   isApproved: boolean;
+  date: string;
 };
 
 export type BlogModel = Model<IBlog, Record<string, unknown>>;
