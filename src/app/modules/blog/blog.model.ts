@@ -11,7 +11,7 @@ const blogSchema = new Schema<IBlog, BlogModel>(
     sub_title: {
       type: String,
       required: true,
-      maxlength: 80,
+      maxlength: 200,
     },
     name: {
       type: String,
