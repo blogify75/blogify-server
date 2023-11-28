@@ -13,7 +13,7 @@ const createBlogService = async (payload: IBlog): Promise<IBlog> => {
 const getBlogService = async (
   payload: ISearchTerm
 ): Promise<IGenericResponse<IBlog[]>> => {
-  const { searchTerm } = payload;
+  const { searchTerm, page, limit } = payload;
 
   const condition = [];
 
@@ -30,7 +30,19 @@ const getBlogService = async (
 
   const whereCondition = condition.length > 0 ? { $and: condition } : {};
 
-  const result = await Blog.find(whereCondition);
+  const queries: any = {};
+
+  if (page) {
+    const skip = (page - 1) * +limit;
+    queries.skip = skip;
+    queries.limit = +limit;
+
+    console.log(queries.skip, queries.limit);
+  }
+
+  const result = await Blog.find(whereCondition)
+    .skip(queries.skip)
+    .limit(queries.limit);
 
   const total = await Blog.countDocuments();
 
