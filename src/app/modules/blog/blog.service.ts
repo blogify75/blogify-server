@@ -41,6 +41,7 @@ const getBlogService = async (
   }
 
   const result = await Blog.find(whereCondition)
+    .sort({ createdAt: -1 })
     .skip(queries.skip)
     .limit(queries.limit);
 
