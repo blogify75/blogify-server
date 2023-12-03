@@ -16,6 +16,10 @@ const productSchema = new Schema<IProduct, ProductModel>(
       type: String,
       required: true,
     },
+    img: {
+      type: String,
+      required: true,
+    },
     price: {
       type: String,
       required: true,
