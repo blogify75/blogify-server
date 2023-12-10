@@ -15,7 +15,7 @@ const getProductService = async (
   const { searchTerm, page, limit } = payload;
 
   const condition = [];
-
+  // query
   if (searchTerm) {
     condition.push({
       $or: productSearchableField.map((fields) => ({
@@ -31,6 +31,7 @@ const getProductService = async (
 
   const queries: any = {};
 
+  // pagination
   if (page) {
     const skip = (page - 1) * +limit;
     queries.skip = skip;

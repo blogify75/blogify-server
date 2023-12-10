@@ -41,6 +41,10 @@ const productSchema = new Schema<IProduct, ProductModel>(
       type: String,
       required: true,
     },
+    categories: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

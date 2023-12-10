@@ -10,6 +10,7 @@ export type IProduct = {
   clickPerCount: number;
   description: string;
   date: string;
+  categories: string;
 };
 
 export type ProductModel = Model<IProduct, Record<string, unknown>>;
