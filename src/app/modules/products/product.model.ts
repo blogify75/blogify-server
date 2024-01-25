@@ -6,7 +6,6 @@ const productSchema = new Schema<IProduct, ProductModel>(
     title: {
       type: String,
       required: true,
-      maxlength: 80,
     },
     name: {
       type: String,
